@@ -1,0 +1,6 @@
+"C:\\Users\\Chao\\Documents\\JCreator Pro\\MyProjects\\PayrollSystem\\src\\DTR.java"
+"C:\\Users\\Chao\\Documents\\JCreator Pro\\MyProjects\\PayrollSystem\\src\\PayrollSystem.java"
+"C:\\Users\\Chao\\Documents\\JCreator Pro\\MyProjects\\PayrollSystem\\src\\PayrollSystemController.java"
+"C:\\Users\\Chao\\Documents\\JCreator Pro\\MyProjects\\PayrollSystem\\src\\PayrollSystemModel.java"
+"C:\\Users\\Chao\\Documents\\JCreator Pro\\MyProjects\\PayrollSystem\\src\\PayrollSystemView.java"
+"C:\\Users\\Chao\\Documents\\JCreator Pro\\MyProjects\\PayrollSystem\\src\\Personnel.java"

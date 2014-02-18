@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<workspace>
+	<settings>
+		<label>PayrollSystem</label>
+	</settings>
+	<users>
+		<user>
+			<path>PayrollSystem.jcu</path>
+		</user>
+	</users>
+	<projects>
+		<project>
+			<path>PayrollSystem.jcp</path>
+		</project>
+	</projects>
+</workspace>
