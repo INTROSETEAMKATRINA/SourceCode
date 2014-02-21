@@ -4,10 +4,9 @@ public class Personnel {
 	private String name;
 	private String position;
 	private String assignment;
-	private String educationalAttainment;
 	private String employeeStatus;
-	private String taxStatus;
 	private String tin;
+	private String taxStatus;
 	private float sss;
 	private float sssLoan;
 	private float phic;
@@ -19,22 +18,16 @@ public class Personnel {
 	private float dailyRate;
 	private float colaRate;
 	private float monthlyRate;
-	private Date dateStarted;
-	private Date presentContractStartDate;
-	private Date presentContractEndDate;
 	private DTR dtr;
 
     public Personnel(String name, String position, String assignment,
-    				 String educationalAttainment, String employeeStatus,String tin, String taxStatus,
+    				 String employeeStatus, String tin, String taxStatus,
     				 float sss, float sssLoan, float phic, float hdmf, float hdmfLoan,
     				 float payrollAdvance, float houseRental, float uniformAndOthers,
-    				 float dailyRate, float colaRate,float monthlyRate,
-    				 Date dateStarted, Date presentContractStartDate,
-    				 Date presentContractEndDate) {
+    				 float dailyRate, float colaRate,float monthlyRate) {
 		this.name = name;
 		this.position = position;
 		this.assignment = assignment;
-		this.educationalAttainment = educationalAttainment;
 		this.employeeStatus = employeeStatus;
 		this.tin = tin;
 		this.taxStatus = taxStatus;
@@ -49,9 +42,6 @@ public class Personnel {
 		this.dailyRate = dailyRate;
 		this.colaRate = colaRate;
 		this.monthlyRate = monthlyRate;
-		this.dateStarted = dateStarted;
-		this.presentContractStartDate = presentContractStartDate;
-		this.presentContractEndDate = presentContractEndDate;
 		this.dtr = null;
     }
 	public String getName(){

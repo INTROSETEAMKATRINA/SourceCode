@@ -1,6 +1,8 @@
 import java.util.Date;
 
 public class DTR {
+	private String name;
+	private String tin;
 	private float regularHoursWorks;
 	private float regularOvertime;
 	private float regularNightShiftDifferential;
@@ -12,7 +14,7 @@ public class DTR {
 	private float legalHolidayNightShiftDifferential;
 	private Date  periodStartDate;
 
-	public DTR(float regularHoursWorks, float regularOvertime, float regularNightShiftDifferential,
+	public DTR(String name, String tin, float regularHoursWorks, float regularOvertime, float regularNightShiftDifferential,
 			   float specialHoliday, float specialHolidayOvertime, float specialHolidayNightShiftDifferential,
 			   float legalHoliday, float legalHolidayOvertime, float legalHolidayNightShiftDifferential,
 			   Date periodStartDate){

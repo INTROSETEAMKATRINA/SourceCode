@@ -1,3 +1,11 @@
+/*******************************************************
+	 *  Class name: PayrollSystemModel
+ 	 *  Inheritance:
+	 *  Attributes: personnels
+	 *  Methods:	PayrollSystemModel,addPersonnel,
+	 *  Functionality: Model
+	 *  Visibility: public
+	 *******************************************************/
 import java.util.ArrayList;
 import java.util.Date;
 import java.text.SimpleDateFormat;
@@ -5,96 +13,149 @@ import java.io.File;
 import jxl.*;
 
 public class PayrollSystemModel {
-	private ArrayList<Personnel> personnels;
 
 	public PayrollSystemModel(){
-		personnels = new ArrayList<Personnel>();
+
 	}
-/*	public void addPersonnel(String fileDirectory){
+	public void addPersonnel(String fileDirectory){
 		try{
 			File file = new File(fileDirectory);
 			Workbook workbook = Workbook.getWorkbook(file);
 			Sheet sheet = workbook.getSheet(0);
 
-			String name,position,assignment,educationalAttainment,employeeStatus,tin,taxStatus;
+			ArrayList<Personnel> personnels = new ArrayList<Personnel>();;
+			String name,position,assignment,employeeStatus,tin,taxStatus;
 			float sss, sssLoan, phic, hdmf, hdmfLoan, payrollAdvance, houseRental, uniformAndOthers;
 			float dailyRate, colaRate, monthlyRate;
-			Date dateStarted, presentContractStartDate, presentContractEndDate;
-			SimpleDateFormat[] possibleFormats = new SimpleDateFormat[] {
-			        new SimpleDateFormat("yyyy-MM-dd"),
-			        new SimpleDateFormat("yyyy/MM/dd"),
-			        new SimpleDateFormat("MM/dd/yyyy"),
-			        new SimpleDateFormat("MM-dd-yyyy") };
 
 			//getCell(column,row)
-			int row = 0;
-			assignment = sheet.getCell(1,row).getContents();
+			int row,column;
 
-			row+=2;
+			row = 0;
+			column = 1;
+			assignment = sheet.getCell(column,row).getContents();
+
+			row += 2;
+			column = 0;
 
 			while(row < sheet.getRows()){
 
-				name = sheet.getCell(0,row).getContents();
+				name = sheet.getCell(column,row).getContents();
 
 				if(name.length() > 0){
 
-					position 			  = sheet.getCell(1,row).getContents();
-					educationalAttainment = sheet.getCell(2,row).getContents();
-
-					dateStarted = null;
-					for(SimpleDateFormat format:possibleFormats){
-
-						try{
-							format.setLenient(false);
-							dateStarted = format.parse(sheet.getCell(3,row).getContents());
-						}catch(Exception e){
-							System.out.println(e);
-							//e1.printStackTrace();
-						}
-					}
-
-					employeeStatus = sheet.getCell(4,row).getContents();
-
-					String date = sheet.getCell(5,row).getContents();
-
-					presentContractStartDate = null;
-					presentContractEndDate = null;
-
-					for(SimpleDateFormat format:possibleFormats){
-						try{
-							format.setLenient(false);
-							presentContractStartDate  = format.parse(date.split("-")[0]);
-							presentContractEndDate    = format.parse(date.split("-")[1]);
-						}catch(Exception e){
-							System.out.println(e);
-							//e2.printStackTrace();
-						}
-					}
+					column++;
+					position = sheet.getCell(column,row).getContents();
+					column++;
+					employeeStatus = sheet.getCell(column,row).getContents();
 
 					dailyRate = 0;
-					colaRate = 0;
-					monthlyRate = 0;
-
+					column++;
 					try{
-						dailyRate 	= Float.parseFloat(sheet.getCell(6,row).getContents());
-						colaRate 	= Float.parseFloat(sheet.getCell(7,row).getContents());
-						monthlyRate = Float.parseFloat(sheet.getCell(8,row).getContents());
+						dailyRate 	= Float.parseFloat(sheet.getCell(column,row).getContents());
 					}catch(Exception e){
 						System.out.println(e);
-						//e3.printStackTrace();
+						//e.printStackTrace();
 					}
 
-					tin 		= sheet.getCell(10,row).getContents();
+					colaRate = 0;
+					column++;
+					try{
+						colaRate 	= Float.parseFloat(sheet.getCell(column,row).getContents());
+					}catch(Exception e){
+						System.out.println(e);
+						//e.printStackTrace();
+					}
 
-					taxStatus 	= sheet.getCell(13,row).getContents();
+					monthlyRate = 0;
+					column++;
+					try{
+						monthlyRate = Float.parseFloat(sheet.getCell(column,row).getContents());
+					}catch(Exception e){
+						System.out.println(e);
+						//e.printStackTrace();
+					}
 
-SSS 		= sheet.getCell(9,row).getContents();
-PHIC 		= sheet.getCell(11,row).getContents();
-					HDMF 		= sheet.getCell(12,row).getContents();
-						personnels.add(new Personnel(name, position, assignment, educationalAttainment,
-												 employeeStatus, SSS, TIN, PHIC, HDMF, taxStatus,
-												 dailyRate, colaRate, monthlyRate, dateStarted,
-												 presentContractStartDate, presentContractEndDate));
+					column++;
+					tin 		= sheet.getCell(column,row).getContents();
+					column++;
+					taxStatus 	= sheet.getCell(column,row).getContents();
+
+					sss = 0;
+					column++;
+					try{
+						sss = Float.parseFloat(sheet.getCell(column,row).getContents());
+					}catch(Exception e){
+						System.out.println(e);
+						//e.printStackTrace();
+					}
+
+					sssLoan = 0;
+					column++;
+					try{
+						sssLoan = Float.parseFloat(sheet.getCell(column,row).getContents());
+					}catch(Exception e){
+						System.out.println(e);
+						//e.printStackTrace();
+					}
+
+					phic = 0;
+					column++;
+					try{
+						phic = Float.parseFloat(sheet.getCell(column,row).getContents());
+					}catch(Exception e){
+						System.out.println(e);
+						//e.printStackTrace();
+					}
+
+					hdmf = 0;
+					column++;
+					try{
+						hdmf = Float.parseFloat(sheet.getCell(column,row).getContents());
+					}catch(Exception e){
+						System.out.println(e);
+						//e.printStackTrace();
+					}
+
+					hdmfLoan = 0;
+					column++;
+					try{
+						hdmfLoan = Float.parseFloat(sheet.getCell(column,row).getContents());
+					}catch(Exception e){
+						System.out.println(e);
+						//e.printStackTrace();
+					}
+
+					payrollAdvance = 0;
+					column++;
+					try{
+						payrollAdvance = Float.parseFloat(sheet.getCell(column,row).getContents());
+					}catch(Exception e){
+						System.out.println(e);
+						//e.printStackTrace();
+					}
+
+					houseRental = 0;
+					column++;
+					try{
+						houseRental = Float.parseFloat(sheet.getCell(column,row).getContents());
+					}catch(Exception e){
+						System.out.println(e);
+						//e.printStackTrace();
+					}
+
+					uniformAndOthers = 0;
+					column++;
+					try{
+						uniformAndOthers = Float.parseFloat(sheet.getCell(column,row).getContents());
+					}catch(Exception e){
+						System.out.println(e);
+						//e.printStackTrace();
+					}
+
+					personnels.add(new Personnel(name, position, assignment,employeeStatus, tin, taxStatus,
+												 sss, sssLoan, phic, hdmf,hdmfLoan, payrollAdvance, houseRental,
+												 uniformAndOthers, dailyRate, colaRate, monthlyRate));
 				}
 				row++;
 			}
@@ -102,8 +163,7 @@ PHIC 		= sheet.getCell(11,row).getContents();
 			System.out.println(e);
 			//e.printStackTrace();
 		}
-		System.out.println(personnels.size());
-	}*/
+	}
 
 	public void addDTR(String fileDirectory){
 		try{
@@ -111,7 +171,8 @@ PHIC 		= sheet.getCell(11,row).getContents();
 			Workbook workbook = Workbook.getWorkbook(file);
 			Sheet sheet = workbook.getSheet(0);
 
-			String name,client;
+			ArrayList<DTR> dtrs = new ArrayList<DTR>();;
+			String name,tin;
 			float regularHoursWorks, regularOvertime, regularNightShiftDifferential,
 				  specialHoliday, specialHolidayOvertime, specialHolidayNightShiftDifferential,
 				  legalHoliday, legalHolidayOvertime, legalHolidayNightShiftDifferential;
@@ -121,95 +182,100 @@ PHIC 		= sheet.getCell(11,row).getContents();
 			        new SimpleDateFormat("yyyy/MM/dd"),
 			        new SimpleDateFormat("MM/dd/yyyy"),
 			        new SimpleDateFormat("MM-dd-yyyy") };
-			int row = 0;
+			int row,column;
 
-			client = sheet.getCell(1,row).getContents();
-
-			row++;
-
+			row = 0;
+			column = 1;
 			periodStartDate = null;
 			for(SimpleDateFormat format : possibleFormats){
 
 				try{
 					format.setLenient(false);
-					periodStartDate = format.parse(sheet.getCell(1,row).getContents());
+					periodStartDate = format.parse(sheet.getCell(column,row).getContents());
 				}catch(Exception e){
 					System.out.println(e);
-					//e1.printStackTrace();
+					//e.printStackTrace();
 				}
 			}
 
-			row+=2;
+			row += 2;
+			column = 0;
 			while(row < sheet.getRows()){
 
-				name = sheet.getCell(0,row).getContents();
+				name = sheet.getCell(column,row).getContents();
 
 				if(name.length() > 0){
 
+					column++;
+					tin = sheet.getCell(column,row).getContents();
+
 					regularHoursWorks = 0;
+					column++;
 					try{
-						regularHoursWorks = Float.parseFloat(sheet.getCell(1,row).getContents());
+						regularHoursWorks = Float.parseFloat(sheet.getCell(column,row).getContents());
 					}catch(Exception e){
 					}
 
 					regularOvertime = 0;
+					column++;
 					try{
-						regularOvertime = Float.parseFloat(sheet.getCell(2,row).getContents());
+						regularOvertime = Float.parseFloat(sheet.getCell(column,row).getContents());
 					}catch(Exception e){
 					}
 
 					regularNightShiftDifferential = 0;
+					column++;
 					try{
-						regularNightShiftDifferential = Float.parseFloat(sheet.getCell(3,row).getContents());
+						regularNightShiftDifferential = Float.parseFloat(sheet.getCell(column,row).getContents());
 					}catch(Exception e){
 					}
 
 				  	specialHoliday = 0;
+				  	column++;
 				  	try{
-						specialHoliday = Float.parseFloat(sheet.getCell(4,row).getContents());
+						specialHoliday = Float.parseFloat(sheet.getCell(column,row).getContents());
 					}catch(Exception e){
 					}
 
 				  	specialHolidayOvertime = 0;
+				  	column++;
 				  	try{
-						specialHolidayOvertime = Float.parseFloat(sheet.getCell(5,row).getContents());
+						specialHolidayOvertime = Float.parseFloat(sheet.getCell(column,row).getContents());
 					}catch(Exception e){
 					}
 
 				  	specialHolidayNightShiftDifferential = 0;
+				  	column++;
 				  	try{
-						specialHolidayNightShiftDifferential = Float.parseFloat(sheet.getCell(6,row).getContents());
+						specialHolidayNightShiftDifferential = Float.parseFloat(sheet.getCell(column,row).getContents());
 					}catch(Exception e){
 					}
 
 				  	legalHoliday = 0;
+				  	column++;
 				  	try{
-						legalHoliday = Float.parseFloat(sheet.getCell(7,row).getContents());
+						legalHoliday = Float.parseFloat(sheet.getCell(column,row).getContents());
 					}catch(Exception e){
 					}
 
 				  	legalHolidayOvertime = 0;
+				  	column++;
 				  	try{
-						legalHolidayOvertime = Float.parseFloat(sheet.getCell(8,row).getContents());
+						legalHolidayOvertime = Float.parseFloat(sheet.getCell(column,row).getContents());
 					}catch(Exception e){
 					}
 
 				  	legalHolidayNightShiftDifferential = 0;
+				  	column++;
 				  	try{
-						legalHolidayNightShiftDifferential = Float.parseFloat(sheet.getCell(9,row).getContents());
+						legalHolidayNightShiftDifferential = Float.parseFloat(sheet.getCell(column,row).getContents());
 					}catch(Exception e){
 					}
 
-					for(Personnel personnel : personnels){
-						if(personnel.getName().equalsIgnoreCase(name)){
-							if(personnel.getAssignment().equalsIgnoreCase(client)){
-								personnel.setDTR(new DTR(regularHoursWorks, regularOvertime, regularNightShiftDifferential,
-			   											 specialHoliday, specialHolidayOvertime,specialHolidayNightShiftDifferential,
-			   											 legalHoliday, legalHolidayOvertime, legalHolidayNightShiftDifferential,
-			   											 periodStartDate));
-							}
-						}
-					}
+				    dtrs.add(new DTR(name, tin, regularHoursWorks, regularOvertime, regularNightShiftDifferential,
+			   								 specialHoliday, specialHolidayOvertime,specialHolidayNightShiftDifferential,
+			   								 legalHoliday, legalHolidayOvertime, legalHolidayNightShiftDifferential,
+			   								 periodStartDate));
 				}
 				row++;
 			}

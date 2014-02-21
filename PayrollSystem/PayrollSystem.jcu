@@ -15,34 +15,34 @@
 	</projects>
 	<open_files>
 		<docitem>
-			<path>src\PayrollSystem.java</path>
+			<path>src\DTR.java</path>
 			<source>true</source>
 			<index>0</index>
 			<active>false</active>
 		</docitem>
 		<docitem>
-			<path>src\DTR.java</path>
+			<path>src\PayrollSystem.java</path>
 			<source>true</source>
 			<index>1</index>
 			<active>false</active>
 		</docitem>
 		<docitem>
-			<path>src\PayrollSystemView.java</path>
+			<path>src\PayrollSystemController.java</path>
 			<source>true</source>
 			<index>2</index>
 			<active>false</active>
 		</docitem>
 		<docitem>
-			<path>src\PayrollSystemController.java</path>
-			<source>true</source>
-			<index>3</index>
-			<active>false</active>
-		</docitem>
-		<docitem>
 			<path>src\PayrollSystemModel.java</path>
 			<source>true</source>
-			<index>4</index>
+			<index>3</index>
 			<active>true</active>
+		</docitem>
+		<docitem>
+			<path>src\PayrollSystemView.java</path>
+			<source>true</source>
+			<index>4</index>
+			<active>false</active>
 		</docitem>
 		<docitem>
 			<path>src\Personnel.java</path>
