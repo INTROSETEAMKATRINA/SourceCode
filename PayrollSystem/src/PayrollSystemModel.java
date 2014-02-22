@@ -3,9 +3,12 @@ import java.util.Date;
 import java.text.SimpleDateFormat;
 import java.io.File;
 import jxl.*;
+import java.sql.Connection;
+
 
 public class PayrollSystemModel {
 	private ArrayList<Personnel> personnels;
+	private Connection con;
 
 	public PayrollSystemModel(){
 		personnels = new ArrayList<Personnel>();
@@ -217,4 +220,44 @@ PHIC 		= sheet.getCell(11,row).getContents();
 		}catch(Exception e){
 		}
 	}
+	
+    public void addAdjustment(String reason, float adjustment, String TIN, String periodStartDate) throws SQLException {
+        Statement stmt = null; 
+        String sql;
+        
+        try{
+            sql="INSERT INTO `Payroll System`.`AdjustmentsAndDeductions`\n" +
+            "(`amount`,\n" +
+            "`type`,\n" +
+            "`PeriodStartDate`,\n" +
+            "`TIN`)\n" +
+            "VALUES\n" +
+            "('"+ adjustment +"',\n" +
+            "'"+ reason +"',\n" +
+            "'"+ periodStartDate +"',\n" +
+            "'"+ TIN +"');";
+            
+            stmt=con.prepareStatement(sql);
+            stmt.execute(sql);
+        } catch(SQLException ex) {
+            sql="UPDATE `Payroll System`.`AdjustmentsAndDeductions`\n" +
+                "SET\n" +
+                "`amount` = '"+ adjustment +"',\n" +
+                "`type` = '"+ reason +"'\n" +
+                "WHERE `PeriodStartDate` = \""+ periodStartDate+"\" AND `TIN` = \""+ TIN+"\"";
+            
+            stmt=con.prepareStatement(sql);
+            stmt.execute(sql);
+        }
+    }
+        
+    public void removeAdjustment(String TIN, String periodStartDate) throws SQLException {
+        Statement stmt = null;         
+        
+        String sql="DELETE FROM `Payroll System`.`AdjustmentsAndDeductions`\n" +
+            "WHERE TIN = \""+ TIN+"\" AND PeriodStartDate =\""+ periodStartDate+"\"";
+        stmt=con.prepareStatement(sql);
+        stmt.execute(sql);
+    }
+	
 }
