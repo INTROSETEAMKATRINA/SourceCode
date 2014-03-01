@@ -105,13 +105,13 @@
 			<active>false</active>
 		</docitem>
 		<docitem>
-			<path>src\GeneratePayslip.java</path>
+			<path>src\ViewPersonnelView.java</path>
 			<source>true</source>
 			<index>15</index>
 			<active>false</active>
 		</docitem>
 		<docitem>
-			<path>src\ViewPersonnelView.java</path>
+			<path>src\GeneratePayslip.java</path>
 			<source>true</source>
 			<index>16</index>
 			<active>false</active>
