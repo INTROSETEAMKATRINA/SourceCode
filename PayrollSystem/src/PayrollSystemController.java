@@ -27,7 +27,7 @@ import java.text.SimpleDateFormat;
 public class PayrollSystemController{
 
 	private Connection con;
-	private SimpleDateFormat sdf = new SimpleDateFormat("yyyy-mm-dd");
+	private SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
 	private Date periodStartDate;
 	private PayrollSystemModel model;
 	private PayrollSystemView view;
@@ -41,7 +41,7 @@ public class PayrollSystemController{
 		this.model = model;
 		this.view = view;
 		this.con = con;
-		try{periodStartDate = sdf.parse("2012-01-13");}
+		try{periodStartDate = sdf.parse("2014-3-1");}
 		catch(Exception ex){}
 		model.setPeriodStartDate(periodStartDate);
 		removeAdjustments = new RemoveAdjustmentsView(model);
