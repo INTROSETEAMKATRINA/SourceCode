@@ -80,4 +80,41 @@ public class Personnel {
 	public void setDTR(DTR dtr){
 		this.dtr = dtr;
 	}
+        public String getTIN(){
+                return tin;
+        }
+        public String getEmployeeStatus(){
+                return employeeStatus;
+        }
+        public float getMonthlyRate(){
+                return monthlyRate;
+        }
+        public float getSSS(){
+                return sss;
+        }
+        public float getSSSLoan(){
+                return sssLoan;
+        }
+        public float getPHIC(){
+                return phic;
+        }
+        public float getHDMF(){
+                return hdmf;
+        }
+        public float getHDMFLoan(){
+                return hdmfLoan;
+        }
+        public float getPayrollAdvance(){
+                return payrollAdvance;
+        }
+        public float getHouseRental(){
+                return houseRental;
+        }
+        public float getUniformAndOthers(){
+                return uniformAndOthers;
+        }
+        
+        
+        
+        
 }

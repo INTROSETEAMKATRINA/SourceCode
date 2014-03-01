@@ -34,7 +34,35 @@
 				<path>src</path>
 			</folderitem>
 			<fileitem>
+				<path>src\AddAdjustmentsView.java</path>
+				<folder>src</folder>
+			</fileitem>
+			<fileitem>
+				<path>src\ChangePasswordView.java</path>
+				<folder>src</folder>
+			</fileitem>
+			<fileitem>
 				<path>src\DTR.java</path>
+				<folder>src</folder>
+			</fileitem>
+			<fileitem>
+				<path>src\GeneratePayslip.java</path>
+				<folder>src</folder>
+			</fileitem>
+			<fileitem>
+				<path>src\GeneratePayslipsView.java</path>
+				<folder>src</folder>
+			</fileitem>
+			<fileitem>
+				<path>src\Java2SQL.java</path>
+				<folder>src</folder>
+			</fileitem>
+			<fileitem>
+				<path>src\ModifyClientVariablesView.java</path>
+				<folder>src</folder>
+			</fileitem>
+			<fileitem>
+				<path>src\ModifyTaxTableView.java</path>
 				<folder>src</folder>
 			</fileitem>
 			<fileitem>
@@ -54,7 +82,27 @@
 				<folder>src</folder>
 			</fileitem>
 			<fileitem>
+				<path>src\Payslip.java</path>
+				<folder>src</folder>
+			</fileitem>
+			<fileitem>
 				<path>src\Personnel.java</path>
+				<folder>src</folder>
+			</fileitem>
+			<fileitem>
+				<path>src\RemoveAdjustmentsView.java</path>
+				<folder>src</folder>
+			</fileitem>
+			<fileitem>
+				<path>src\RemovePersonnelView.java</path>
+				<folder>src</folder>
+			</fileitem>
+			<fileitem>
+				<path>src\ViewPersonnelView.java</path>
+				<folder>src</folder>
+			</fileitem>
+			<fileitem>
+				<path>src\ViewSummaryReportView.java</path>
 				<folder>src</folder>
 			</fileitem>
 		</include>
