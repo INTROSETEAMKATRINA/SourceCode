@@ -7,9 +7,12 @@
 	<projects>
 		<project>
 			<label>PayrollSystem</label>
-			<showfiles>false</showfiles>
+			<showfiles>true</showfiles>
 			<folderitem>
 				<path>src</path>
+			</folderitem>
+			<folderitem>
+				<path>classes</path>
 			</folderitem>
 		</project>
 	</projects>
@@ -24,31 +27,31 @@
 			<path>src\PayrollSystem.java</path>
 			<source>true</source>
 			<index>1</index>
-			<active>true</active>
-		</docitem>
-		<docitem>
-			<path>src\PayrollSystemController.java</path>
-			<source>true</source>
-			<index>2</index>
 			<active>false</active>
 		</docitem>
 		<docitem>
 			<path>src\PayrollSystemModel.java</path>
 			<source>true</source>
-			<index>3</index>
+			<index>2</index>
 			<active>false</active>
 		</docitem>
 		<docitem>
 			<path>src\ViewSummaryReportView.java</path>
 			<source>true</source>
-			<index>4</index>
+			<index>3</index>
 			<active>false</active>
 		</docitem>
 		<docitem>
 			<path>src\Personnel.java</path>
 			<source>true</source>
-			<index>5</index>
+			<index>4</index>
 			<active>false</active>
+		</docitem>
+		<docitem>
+			<path>src\PayrollSystemController.java</path>
+			<source>true</source>
+			<index>5</index>
+			<active>true</active>
 		</docitem>
 		<docitem>
 			<path>src\PayrollSystemView.java</path>
@@ -129,4 +132,70 @@
 			<enabled>true</enabled>
 		</batchbuild>
 	</batchbuilds>
+	<symboltables>
+		<symboltable>
+			<path>src\PayrollSystemView.java.sdk</path>
+			<symbols>
+				<symbol>PayrollSystemModel</symbol>
+				<symbol>PayrollSystemView</symbol>
+			</symbols>
+		</symboltable>
+		<symboltable>
+			<path>src\PayrollSystem.java.sdk</path>
+			<symbols>
+				<symbol>PayrollSystem</symbol>
+				<symbol>PayrollSystemController</symbol>
+				<symbol>PayrollSystemModel</symbol>
+				<symbol>PayrollSystemView</symbol>
+				<symbol>RequestFocusListener</symbol>
+			</symbols>
+		</symboltable>
+		<symboltable>
+			<path>src\PayrollSystemModel.java.sdk</path>
+			<symbols>
+				<symbol>DTR</symbol>
+				<symbol>PayrollSystemModel</symbol>
+				<symbol>Payslip</symbol>
+				<symbol>Personnel</symbol>
+			</symbols>
+		</symboltable>
+		<symboltable>
+			<path>src\PayrollSystemController.java.sdk</path>
+			<symbols>
+				<symbol>AddAdjustmentsView</symbol>
+				<symbol>ChangePasswordView</symbol>
+				<symbol>GeneratePayslipsView</symbol>
+				<symbol>PayrollSystemController</symbol>
+				<symbol>PayrollSystemModel</symbol>
+				<symbol>PayrollSystemView</symbol>
+				<symbol>RemoveAdjustmentsView</symbol>
+				<symbol>ViewSummaryReportView</symbol>
+				<symbol>addAdjustmentButtonListener</symbol>
+				<symbol>addAdjustmentListener</symbol>
+				<symbol>addDTRListener</symbol>
+				<symbol>addPeriodStartDateListener</symbol>
+				<symbol>addPersonnelListener</symbol>
+				<symbol>cancelAddAdjustmentButtonListener</symbol>
+				<symbol>cancelChangePasswordButtonListener</symbol>
+				<symbol>cancelGeneratePayslipsButtonListener</symbol>
+				<symbol>cancelRemoveAdjustmentButtonListener</symbol>
+				<symbol>cancelViewSummaryReportListener</symbol>
+				<symbol>changePasswordButtonListener</symbol>
+				<symbol>changePasswordListener</symbol>
+				<symbol>clientListAddAdjustmentListener</symbol>
+				<symbol>clientListGeneratePayslipsListener</symbol>
+				<symbol>clientListRemoveAdjustmentListener</symbol>
+				<symbol>fileSaverGeneratePayslipsButtonListener</symbol>
+				<symbol>generatePayslipsButtonListener</symbol>
+				<symbol>generatePayslipsListener</symbol>
+				<symbol>nextTimePeriod</symbol>
+				<symbol>personnelListRemoveAdjustmentListener</symbol>
+				<symbol>removeAdjustmentButtonListener</symbol>
+				<symbol>removeAdjustmentListener</symbol>
+				<symbol>showPasswordListener</symbol>
+				<symbol>viewReportListener</symbol>
+				<symbol>viewSummaryReportListener</symbol>
+			</symbols>
+		</symboltable>
+	</symboltables>
 </workspace_user>

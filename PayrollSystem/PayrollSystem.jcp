@@ -6,7 +6,7 @@
 		<root_path>\</root_path>
 		<output_path>classes\</output_path>
 		<source_path>src\</source_path>
-		<jdkprofile_ref>JDK version 1.7.0_13</jdkprofile_ref>
+		<jdkprofile_ref>JDK version 1.7.0_21</jdkprofile_ref>
 		<compiler_ref>&lt;Default&gt;</compiler_ref>
 		<ant_ref/>
 	</settings>
@@ -26,6 +26,7 @@
 		</runtime>
 	</runtimes>
 	<libraries>
+		<library_ref>connector</library_ref>
 		<library_ref>jxl</library_ref>
 	</libraries>
 	<files>
@@ -33,6 +34,12 @@
 			<folderitem>
 				<path>src</path>
 			</folderitem>
+			<fileitem>
+				<path>jxl.jar</path>
+			</fileitem>
+			<fileitem>
+				<path>mysql-connector-java-5.1.25-bin.jar</path>
+			</fileitem>
 			<fileitem>
 				<path>src\AddAdjustmentsView.java</path>
 				<folder>src</folder>
@@ -95,6 +102,10 @@
 			</fileitem>
 			<fileitem>
 				<path>src\RemovePersonnelView.java</path>
+				<folder>src</folder>
+			</fileitem>
+			<fileitem>
+				<path>src\RequestFocusListener.java</path>
 				<folder>src</folder>
 			</fileitem>
 			<fileitem>

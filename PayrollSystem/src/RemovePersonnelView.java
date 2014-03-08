@@ -1,3 +1,13 @@
+/*******************************************************
+	 *  Class name: RemovePersonnelView
+ 	 *  Inheritance: JFrame
+	 *  Attributes: model
+	 *  Methods:	RemovePersonnelView, getClient, setRemoveListener
+	 *				setCancelListener
+	 *  Functionality: View
+	 *  Visibility: public
+	 *******************************************************/
+
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Font;
@@ -32,7 +42,7 @@ public class RemovePersonnelView extends JFrame {
 	private JButton removeBtn;
 	private JButton applyBtn;
 
-	private JComboBox clientCBox;
+	private JComboBox<String> clientCBox;
 	
 	public RemovePersonnelView(PayrollSystemModel model)
 	{
@@ -72,7 +82,7 @@ public class RemovePersonnelView extends JFrame {
 		selectClientLbl = new JLabel("Select Client: ");
 		personnelLbl = new JLabel("<Client>'s Personnel List ");
 		
-		clientCBox = new JComboBox();
+		clientCBox = new JComboBox<String>();
 		
 		modifyUI();
 	}
@@ -167,7 +177,9 @@ public class RemovePersonnelView extends JFrame {
 		add(cancelBtn,gbc);
 	}
 	
-	public String getClient(){ return null; }
+	public String getClient(){ 
+		return null; 
+	}
 	
 	public void setRemoveListener(){}
 	public void setCancelListener(){}
